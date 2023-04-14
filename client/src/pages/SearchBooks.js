@@ -24,6 +24,8 @@ const SearchBooks = () => {
 
   const [saveBook] = useMutation(SAVE_BOOK)
 
+  const searchGoogleBooks = fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput}`); 
+
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
   // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
   useEffect(() => {
